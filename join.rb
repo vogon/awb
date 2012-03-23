@@ -1,7 +1,8 @@
 require 'model/player'
 
 get '/join/:name' do
-	$g or return "no game is currently running."
+	$g or return 403             # die if no game is running
+	params[:name] or return 400  # die if no player name was specified
 
 	player = Player.new(params[:name])
 

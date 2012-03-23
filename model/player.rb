@@ -5,8 +5,18 @@ class Player
 	end
 
 	def join(game)
-		game.join(self)
+		id = game.join(self)
+
+		@game = game
+		@id = id
+	end
+
+	def answer(anid)
+		# submit answer and get rid of the card
+		@game.current_point.answer[@id] = [@hand[anid]]
+		@hand.slice!(anid)
 	end
 
 	attr_accessor :name, :hand
+	attr_reader :game
 end

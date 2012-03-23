@@ -1,3 +1,6 @@
+require 'model/game'
+require 'model/question'
+
 class Point
 	def initialize(game, question, card_czar)
 		game.is_a? Game or raise "game must not be nil"
@@ -29,15 +32,15 @@ class Point
 
 		def []=(idx, answer)
 			answer.is_a? Array or raise "answer is wrong type"
+			idx != @point.card_czar or raise "the card czar can't answer!"
 
 			if @value[idx] then
 				raise "no backsies!"
-			elsif @value[idx].length != pt.question.arity then
+			elsif answer.length != pt.question.arity then
 				raise "wrong number of answers"
 			else
 				@value[idx] = answer
 			end		
 		end
 	end
-
 end

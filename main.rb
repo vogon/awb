@@ -2,5 +2,6 @@ $LOAD_PATH << "."
 
 require 'sinatra'
 
-require 'newgame.rb'
-require 'join.rb'
+# request handlers
+require 'newgame'
+require 'join'
