@@ -1,5 +1,5 @@
 class Point
-	def initialize(game, question)
+	def initialize(game, question, card_czar)
 		game.is_a? Game or raise "game must not be nil"
 		question.is_a? Question or raise "question must not be nil"
 
@@ -7,13 +7,14 @@ class Point
 		@question = question
 
 		@answers = [nil] * game.n_players
+		@card_czar = card_czar
 	end
 
 	def answer
 		Answers.new(self, @answers)
 	end
 
-	attr_reader :question
+	attr_reader :question, :card_czar
 
 	private
 	class Answers
