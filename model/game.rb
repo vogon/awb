@@ -3,13 +3,9 @@ class Game
 		n_players > 0 and n_players.is_a? Fixnum or raise "n_players bad"
 		set.is_a? GameSet and set.valid? or raise "set bad"
 
-		@n = n_players
+		@n_players = n_players
 		@questions = set.questions.shuffle
 		@answers = set.answers.shuffle
-	end
-
-	def n_players
-		@n
 	end
 
 	def draw_question!
@@ -19,4 +15,6 @@ class Game
 	def draw_answer!
 		@answers.pop
 	end
+
+	attr_reader :n_players
 end

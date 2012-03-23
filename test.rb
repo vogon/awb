@@ -8,7 +8,7 @@ require 'model/gameset'
 require 'sinatra'
 
 get '/' do 
-	core_set = GameSet::load("./assets/test.yaml")
+	core_set = GameSet::load("./assets/core_1.2.yaml")
 
 	g = Game.new(4, core_set)
 

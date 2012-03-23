@@ -13,9 +13,7 @@ class Point
 		Answers.new(self, @answers)
 	end
 
-	def question
-		@question
-	end
+	attr_reader :question
 
 	private
 	class Answers

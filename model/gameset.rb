@@ -22,7 +22,7 @@ class GameSet
 
 			questions = []
 
-			for q in yaml[:questions] do
+			yaml[:questions].each do |q|
 				case
 				when (q.is_a? String) then
 					questions << Question.new(q, 1)
@@ -34,7 +34,7 @@ class GameSet
 
 			answers = []
 
-			for a in yaml[:answers] do
+			yaml[:answers].each do |a|
 				answers << a
 			end
 
@@ -53,13 +53,7 @@ class GameSet
 		@questions.length > 0 and @answers.length > 0
 	end
 
-	def questions
-		@questions
-	end
-
-	def answers
-		@answers
-	end
+	attr_reader :questions, :answers
 end
 
 GameSet::load("../assets/test.yaml")

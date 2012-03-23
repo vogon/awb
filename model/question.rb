@@ -4,11 +4,5 @@ class Question
 		@arity = arity
 	end
 
-	def text
-		@text
-	end
-
-	def arity
-		@arity
-	end
+	attr_reader :text, :arity
 end
