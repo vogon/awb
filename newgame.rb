@@ -1,13 +1,25 @@
 require 'model/game'
 require 'model/gameset'
 
-get '/newgame/:n_players' do
-	# die if no player count was specified, or the count is < 4
-	(params[:n_players] && params[:n_players].to_i >= 4) or return 400
+def new_game(n_players)
+	if (n_players < 4) then 
+		raise ArgumentError.new "not enough players"
+	end
 
-	core_set = GameSet::load("./assets/core_1.2.yaml")
+	core_set = GameSet::load('./assets/core_1.2.yaml')
 
 	$g = Game.new(params[:n_players].to_i, core_set)
+end
 
-	"new game created with #{params[:n_players]} players."
+get '/newgame/:n_players' do
+	# die with a 400 if no player count was specified
+	params[:n_players] or return 400
+
+	begin
+		new_game(params[:n_players].to_i)
+
+		"new game created with #{params[:n_players]} players."
+	rescue ArgumentError
+		return 400
+	end
 end

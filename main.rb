@@ -3,5 +3,8 @@ $LOAD_PATH << "."
 require 'sinatra'
 
 # request handlers
-require 'newgame'
 require 'join'
+require 'newgame'
+require 'nextpoint'
+require 'play'
+require 'status'

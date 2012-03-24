@@ -13,11 +13,17 @@ class Point
 		@card_czar = card_czar
 	end
 
+	def finished?
+		(0...game.n_players).all? do |i|
+			(card_czar == i) || @answers[i]
+		end
+	end
+
 	def answer
 		Answers.new(self, @answers)
 	end
 
-	attr_reader :question, :card_czar
+	attr_reader :game, :question, :card_czar
 
 	private
 	class Answers
@@ -32,11 +38,13 @@ class Point
 
 		def []=(idx, answer)
 			answer.is_a? Array or raise "answer is wrong type"
+			(0...@point.game.n_players) === idx or 
+				raise "that player doesn't exist!"
 			idx != @point.card_czar or raise "the card czar can't answer!"
 
 			if @value[idx] then
 				raise "no backsies!"
-			elsif answer.length != pt.question.arity then
+			elsif answer.length != @point.question.arity then
 				raise "wrong number of answers"
 			else
 				@value[idx] = answer

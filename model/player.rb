@@ -11,10 +11,16 @@ class Player
 		@id = id
 	end
 
-	def answer(anid)
-		# submit answer and get rid of the card
-		@game.current_point.answer[@id] = [@hand[anid]]
-		@hand.slice!(anid)
+	def answer(anids)
+		answers = []
+
+		anids.each do |id|
+			answers << hand[id]
+		end
+
+		# submit answers and get rid of the cards
+		@game.current_point.answer[@id] = answers
+		@hand -= answers
 	end
 
 	attr_accessor :name, :hand

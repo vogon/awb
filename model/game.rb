@@ -26,6 +26,10 @@ class Game
 	end
 
 	def next_point!
+		if @current_point && !(@current_point.finished?) then
+			raise "hold on, we're still finishing the last one"
+		end
+
 		@current_point = Point.new(self, draw_question!, @card_czar)
 		@card_czar = (@card_czar + 1) % @n_players
 
