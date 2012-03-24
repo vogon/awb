@@ -1,3 +1,5 @@
+require 'json'
+
 require 'model/game'
 require 'model/gameset'
 
@@ -18,7 +20,9 @@ get '/newgame/:n_players' do
 	begin
 		new_game(params[:n_players].to_i)
 
-		"new game created with #{params[:n_players]} players."
+		result = {}
+
+		JSON.dump(result)
 	rescue ArgumentError
 		return 400
 	end
