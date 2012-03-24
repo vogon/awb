@@ -3,5 +3,11 @@ get '/nextpoint' do
 
 	$g.next_point!
 
-	"started a new point"
+	result = 
+		{
+		 	:question => $g.current_point.question.text,
+		 	:arity    => $g.current_point.question.arity,
+		 	:card_czar => $g.current_point.card_czar
+		}
+	JSON.dump(result)
 end

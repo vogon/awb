@@ -26,6 +26,10 @@ class Game
 	end
 
 	def next_point!
+		if players.any? { |p| !p } then
+			raise "game isn't full yet"
+		end
+
 		if @current_point && !(@current_point.finished?) then
 			raise "hold on, we're still finishing the last one"
 		end
