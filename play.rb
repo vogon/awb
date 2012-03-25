@@ -1,3 +1,5 @@
+require 'json'
+
 def poetic_print(answers)
 	(answers[1..-1]).inject(answers[0]) { |memo, s| memo + " / " + s }
 end

@@ -1,0 +1,21 @@
+body
+{
+	font-family: 'Helvetica W01 Roman', "Arial", sans-serif;
+}
+
+.title
+{
+	font-family: 'Helvetica W01 Bold';
+	font-size: xx-large;
+}
+
+.subtitle
+{
+	font-family: 'Helvetica W01 Bold';
+	font-size: x-large;
+}
+
+#mti_wfs_colophon
+{
+	display: none !important;
+}

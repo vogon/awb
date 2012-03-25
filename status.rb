@@ -1,3 +1,5 @@
+require 'json'
+
 def card_czar_markup(plid)
 	if ($g.current_point.card_czar == plid) then
 		"You're the card czar."
@@ -21,6 +23,14 @@ def hand_markup(plid)
 		end
 
 		status
+	end
+end
+
+get '/status' do
+	if $g then
+		JSON.dump({:games => ["blah"]})
+	else
+		JSON.dump({:games => []})
 	end
 end
 

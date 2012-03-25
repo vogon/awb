@@ -1,3 +1,5 @@
+require 'json'
+
 get '/nextpoint' do
 	$g or return 403
 

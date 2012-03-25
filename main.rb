@@ -6,5 +6,5 @@ require 'play'
 require 'status'
 
 get '/' do
-	File.read('./www/main.html')
+	redirect '/main.html', 303
 end
