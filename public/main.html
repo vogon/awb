@@ -15,19 +15,21 @@
 	</title>
 </head>
 <body>
-	<div class="title">Awkward Without Borders</div>
-	<div class="subtitle">a web game for terrible people</div><br/>
+	<div class="header title">
+		<span class="title">Awkward Without Borders.</span>
+		<span class="subtitle">a web game for terrible people.</span>
 
-	<div class="login_status" id="logged_out">
-		you're logged out.  log in?
-		<form id="login_form" action="#" onsubmit="loginFormSubmit()">
-			<input type="text" value="Jeff Goldblum" id="username">
-			<input type="submit" value="log in">
-		</form>
-	</div>
+		<span class="login_status" id="logged_out">
+			you're logged out.
+			<form id="login_form" action="#" onsubmit="loginFormSubmit()">
+				<input type="text" value="Jeff Goldblum" id="username">
+				<input type="submit" value="log in">
+			</form>
+		</span>
 
-	<div class="login_status" id="logged_in" hidden="true">
-		[this shit should be invisible]
+		<span class="login_status" id="logged_in" hidden="true">
+			[this shit should be invisible]
+		</span>
 	</div>
 
 	<div id="active_games" hidden="true">

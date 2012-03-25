@@ -1,13 +1,13 @@
 function displayLoggedIn(client) {
 	logged_in.innerText = "you're logged in as " + client.name();
 
-	logged_out.hidden = true;
-	logged_in.hidden = false;
+	logged_in.style.display = "inline-block";
+	logged_out.style.display = "none";
 }
 
 function displayLoggedOut() {
-	logged_out.hidden = false;
-	logged_in.hidden = true;
+	logged_in.style.display = "none";
+	logged_out.style.display = "inline-block";
 }
 
 function displayActiveGames(serverStatus) {
@@ -45,6 +45,7 @@ function startNewGame(nPlayers) {
 
 function onReady() {
 	//AWB.client.login("Jeff Goldblum", loggedIn);
+	displayLoggedOut();
 }
 
 $(document).ready(onReady)
