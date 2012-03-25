@@ -1,10 +1,12 @@
 <html>
 <head>
 	<script src="jquery-1.7.2.js"></script>
+	<script src="awb_client.js"></script>
 	<script src="main.js"></script>
 
-	<!-- yarr, here be helvetica -->
+	<!-- yarr, here be helvetica
 	<script type="text/javascript" src="http://fast.fonts.com/jsapi/c6fb81c9-56c6-4f05-a08d-ed5dee76759c.js"></script>
+	-->
 
 	<link rel="stylesheet" href="awb.css">
 
@@ -13,9 +15,28 @@
 	</title>
 </head>
 <body>
-	<span class="title">Awkward Without Borders</span><br/>
-	<span class="subtitle">a web game for terrible people</span>
+	<div class="title">Awkward Without Borders</div>
+	<div class="subtitle">a web game for terrible people</div><br/>
 
-	<div id="content" />
+	<div class="login_status" id="logged_out">
+		you're logged out.  log in?
+		<form id="login_form" action="#" onsubmit="loginFormSubmit()">
+			<input type="text" value="Jeff Goldblum" id="username">
+			<input type="submit" value="log in">
+		</form>
+	</div>
+
+	<div class="login_status" id="logged_in" hidden="true">
+		[this shit should be invisible]
+	</div>
+
+	<div id="active_games" hidden="true">
+		There are <span class="n">0</span> active games right now.  
+		<a href="javascript:startNewGame(4)">Start a new game</a>?
+		<a href="javascript:refreshActiveGames()">Refresh this list</a>?
+
+		<ul>
+		</ul>
+	</div>
 </body>
 </html>

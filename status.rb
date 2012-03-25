@@ -28,9 +28,9 @@ end
 
 get '/status' do
 	if $g then
-		JSON.dump({:games => ["blah"]})
+		JSON.dump({:n_games => 1, :games => {123 => "blah"}})
 	else
-		JSON.dump({:games => []})
+		JSON.dump({:n_games => 0, :games => {}})
 	end
 end
 
