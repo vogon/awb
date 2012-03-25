@@ -1,7 +1,3 @@
-$LOAD_PATH << "."
-
-require 'sinatra'
-
 # request handlers
 require 'join'
 require 'newgame'

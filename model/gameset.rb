@@ -20,23 +20,9 @@ class GameSet
 			name = yaml[:name]
 			version = yaml[:version]
 
-			questions = []
+			questions = yaml[:questions].map{|q| Question.new(q)}
 
-			yaml[:questions].each do |q|
-				case
-				when (q.is_a? String) then
-					questions << Question.new(q, 1)
-				when (q.is_a? Hash) then
-					questions << Question.new(q[:question], q[:arity])
-				else raise "unrecognized question format"
-				end
-			end
-
-			answers = []
-
-			yaml[:answers].each do |a|
-				answers << a
-			end
+			answers = yaml[:answers]
 
 			return GameSet.new(name, version, questions, answers)
 
