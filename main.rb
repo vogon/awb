@@ -6,5 +6,5 @@ require 'play'
 require 'status'
 
 get '/' do
-	File.read('./view.html')
+	File.read('./www/main.html')
 end
