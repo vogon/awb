@@ -1,6 +1,8 @@
 body
 {
 	font-family: 'Helvetica W01 Roman', "Arial", sans-serif;
+	font-size: 62.5%;
+
 	background-color: #a0a0a0;
 	margin: 0px;
 	width: 100%;
@@ -8,18 +10,23 @@ body
 
 input[type="text"] 
 {
-	font-family: 'Helvetica W01 Bold';
+	font-family: 'Helvetica W01 Bold', 'Helvetica', 'Arial', sans-serif;
+	font-weight: 700;
+	font-size: 1.0em;
 	color: #202020;
+
 	background-color: #f0f0f0;
 	border: 2px solid #f0f0f0;
 	border-radius: 2px;
-	font-size: medium;
 }
 
 input[type="submit"]
 {
-	font-family: 'Helvetica W01 Bold';
+	font-family: 'Helvetica W01 Bold', 'Helvetica', 'Arial', sans-serif;
+	font-weight: 700;
+	font-size: 1.0em;
 	color: #f0f0f0;
+
 	background-color: #202020;
 	border: 2px solid #f0f0f0;
 	border-radius: 2px;
@@ -30,7 +37,7 @@ input[type="submit"]
 {
 	color: #f0f0f0;
 	background-color: #202020;
-	/*width: 100%;*/
+
 	position: relative;
 	padding: 4px;
 	padding-left: 8px;
@@ -39,25 +46,34 @@ input[type="submit"]
 
 .title
 {
-	font-family: 'Helvetica W01 Bold';
-	font-size: xx-large;
+	font-family: 'Helvetica W01 Bold', 'Helvetica', 'Arial', sans-serif;
+	font-weight: 700;
+	font-size: 1.8em;
+	height: 2em;
 }
 
 .subtitle
 {
-	font-family: 'Helvetica W01 Bold';
-	font-size: large;
+	font-family: 'Helvetica W01 Bold', 'Helvetica', 'Arial', sans-serif;
+	font-weight: 700;
+	font-size: 0.9em;
+}
+
+.spacer 
+{
+	min-width: 100%;
 }
 
 .login_status
 {
-	font-family: 'Helvetica W01 Roman';
+	font-family: 'Helvetica W01 Roman', 'Helvetica', 'Arial', sans-serif;
 	font-size: medium;
-	position: absolute;
-	vertical-align: baseline;
-	bottom: 4px;
+	left: 100%;
 	right: 4px;
-	float: right;
+	/*position: absolute;*/
+	/*bottom: 4px;
+	right: 4px;*/
+	/*float: right;*/
 }
 
 #login_form 

@@ -1,5 +1,5 @@
 function displayLoggedIn(client) {
-	logged_in.innerText = "you're logged in as " + client.name();
+	$("#logged_in > .username")[0].innerText = client.name();
 
 	logged_in.style.display = "inline-block";
 	logged_out.style.display = "none";
