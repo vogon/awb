@@ -1,35 +1,46 @@
+$off-white: #f0f0f0;
+$light-grey: #a0a0a0;
+$dark-grey: #202020;
+
+@mixin bold{
+	font-family: 'Helvetica W01 Bold';
+}
+
+@mixin roman{
+	font-family: 'Helvetica W01 Roman';
+}
+
 body
 {
 	font-family: 'Helvetica W01 Roman', "Arial", sans-serif;
-	background-color: #a0a0a0;
+	background-color: $light-grey;
 	margin: 0px;
 	width: 100%;
 }
 
-input[type="text"] 
-{
-	font-family: 'Helvetica W01 Bold';
-	color: #202020;
-	background-color: #f0f0f0;
-	border: 2px solid #f0f0f0;
-	border-radius: 2px;
-	font-size: medium;
-}
 
-input[type="submit"]
+input
 {
-	font-family: 'Helvetica W01 Bold';
-	color: #f0f0f0;
-	background-color: #202020;
-	border: 2px solid #f0f0f0;
+	@include bold;
+	border: 2px solid $off-white;
 	border-radius: 2px;
 	font-size: medium;
+	&[type="text"]
+	{
+		color: $dark-grey;
+		background-color: $off-white;
+	}
+	&[type="submit"]
+	{
+		color: $off-white;
+		background-color: $dark-grey;
+	}
 }
 
 .header 
 {
-	color: #f0f0f0;
-	background-color: #202020;
+	color: $off-white;
+	background-color: $dark-grey;
 	/*width: 100%;*/
 	position: relative;
 	padding: 4px;
@@ -39,19 +50,19 @@ input[type="submit"]
 
 .title
 {
-	font-family: 'Helvetica W01 Bold';
+	@include bold;
 	font-size: xx-large;
 }
 
 .subtitle
 {
-	font-family: 'Helvetica W01 Bold';
+	@include bold;
 	font-size: large;
 }
 
 .login_status
 {
-	font-family: 'Helvetica W01 Roman';
+	@include roman;
 	font-size: medium;
 	position: absolute;
 	vertical-align: baseline;
