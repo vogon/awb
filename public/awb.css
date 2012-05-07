@@ -1,71 +1,49 @@
-body
-{
-	font-family: 'Helvetica W01 Roman', "Arial", sans-serif;
-	background-color: #a0a0a0;
-	margin: 0px;
-	width: 100%;
-}
+body {
+  font-family: 'Helvetica W01 Roman', "Arial", sans-serif;
+  background-color: #a0a0a0;
+  margin: 0px;
+  width: 100%; }
 
-input[type="text"] 
-{
-	font-family: 'Helvetica W01 Bold';
-	color: #202020;
-	background-color: #f0f0f0;
-	border: 2px solid #f0f0f0;
-	border-radius: 2px;
-	font-size: medium;
-}
+input {
+  font-family: 'Helvetica W01 Bold';
+  border: 2px solid #f0f0f0;
+  border-radius: 2px;
+  font-size: medium; }
+  input[type="text"] {
+    color: #202020;
+    background-color: #f0f0f0; }
+  input[type="submit"] {
+    color: #f0f0f0;
+    background-color: #202020; }
 
-input[type="submit"]
-{
-	font-family: 'Helvetica W01 Bold';
-	color: #f0f0f0;
-	background-color: #202020;
-	border: 2px solid #f0f0f0;
-	border-radius: 2px;
-	font-size: medium;
-}
+.header {
+  color: #f0f0f0;
+  background-color: #202020;
+  /*width: 100%;*/
+  position: relative;
+  padding: 4px;
+  padding-left: 8px;
+  border-bottom: 2px solid #000; }
 
-.header 
-{
-	color: #f0f0f0;
-	background-color: #202020;
-	/*width: 100%;*/
-	position: relative;
-	padding: 4px;
-	padding-left: 8px;
-	border-bottom: 2px solid #000;
-}
+.title {
+  font-family: 'Helvetica W01 Bold';
+  font-size: xx-large; }
 
-.title
-{
-	font-family: 'Helvetica W01 Bold';
-	font-size: xx-large;
-}
+.subtitle {
+  font-family: 'Helvetica W01 Bold';
+  font-size: large; }
 
-.subtitle
-{
-	font-family: 'Helvetica W01 Bold';
-	font-size: large;
-}
+.login_status {
+  font-family: 'Helvetica W01 Roman';
+  font-size: medium;
+  position: absolute;
+  vertical-align: baseline;
+  bottom: 4px;
+  right: 4px;
+  float: right; }
 
-.login_status
-{
-	font-family: 'Helvetica W01 Roman';
-	font-size: medium;
-	position: absolute;
-	vertical-align: baseline;
-	bottom: 4px;
-	right: 4px;
-	float: right;
-}
+#login_form {
+  display: inline; }
 
-#login_form 
-{
-	display: inline;
-}
-
-#mti_wfs_colophon
-{
-	display: none !important;
-}
+#mti_wfs_colophon {
+  display: none !important; }
