@@ -1,0 +1,196 @@
+---
+:name: Cards Against Humanity Core Set
+:version: '1.2'
+:license: CC-BY-NC-SA
+:copyright: Cards Against Humanity LLC
+:questions:
+- :guid: 11cde367-79de-40b8-b14b-febe7cbefe6c
+  :question: What helps Obama unwind?
+  :arity: 1
+- :guid: ae4d9f4f-e95a-4539-87ad-5d9798baa680
+  :question: ! 'This is the way the world ends
+
+    This is the way the world ends
+
+    Not with a bang but with
+
+    _____.'
+  :arity: 1
+- :guid: 0cb4faf6-ff56-4555-9463-7557c84b555a
+  :question: ! 'Coming to Broadway this season, _____: The Musical.'
+  :arity: 1
+- :guid: 1bd1e7fe-ea4f-4012-8052-00ca77c18e1d
+  :question: Anthropologists have recently discovered a primitive tribe that worships
+    _____.
+  :arity: 1
+- :guid: 95a5794e-7915-4809-9b71-0727348a2e40
+  :question: But before I kill you, Mr. Bond, I must show you _____.
+  :arity: 1
+- :guid: c127e0c4-a4a5-4a32-8d93-f696318786ee
+  :question: Studies show that lab rats navigate mazes 50% faster after being exposed
+    to _____.
+  :arity: 1
+- :guid: b9303c18-565d-4768-8e5c-35a51f63444c
+  :question: What's the next superhero/sidekick duo?
+  :arity: 2
+- :guid: c9bed13b-bf39-47b0-bdfd-ef7cfee96cae
+  :question: What are my parents hiding from me?
+  :arity: 1
+- :guid: 9601c0b4-8ab2-4738-b690-b161a86c8fe4
+  :question: _____. Betcha can't have just one!
+  :arity: 1
+- :guid: 9e153436-3d5c-4290-b61b-3b2bea322b4b
+  :question: What's that smell?
+  :arity: 1
+:answers:
+- :guid: 69345f48-50e4-477a-a183-88a13af6252a
+  :answer: A Gypsy curse.
+- :guid: e16e65f9-9c90-44e7-a777-7f395455528e
+  :answer: A moment of silence.
+- :guid: a1f504a7-fc46-41de-b372-179a261b88e8
+  :answer: A sausage festival.
+- :guid: 64739cef-7fa7-41b3-baf8-e589c3d6c460
+  :answer: An honest cop with nothing left to lose.
+- :guid: f277133b-7806-4a1a-908f-32da4edda1b7
+  :answer: Famine.
+- :guid: 2f638a5b-d4b6-41ba-a59a-f76a4241088b
+  :answer: Flesh-eating bacteria.
+- :guid: d1a639c5-06ea-43de-89b6-820f0b1a4729
+  :answer: Flying sex snakes.
+- :guid: 9516833e-6dff-4120-a58d-2ec2dc627cdb
+  :answer: Not giving a shit about the Third World.
+- :guid: 2787e154-8e6d-4bc8-adaa-cf3b9fc89d8b
+  :answer: Sexting.
+- :guid: 81ca1f85-c830-481d-82bc-308c7ecb844b
+  :answer: Shapeshifters.
+- :guid: fc0d76c7-7cb0-4ec8-8ace-34d12b80fea4
+  :answer: Men.
+- :guid: 14034639-7d61-434d-ad32-7a185bd471c3
+  :answer: The Amish.
+- :guid: f2cf95f1-0827-4cdf-939d-8237b92e185e
+  :answer: Pterodactyl eggs.
+- :guid: ae6874cf-bc0a-4d15-b4a4-1c5602e39630
+  :answer: Team-building exercises.
+- :guid: 5ca4aa4e-18f1-4204-ac96-d46a8d27a646
+  :answer: Erectile dysfunction.
+- :guid: 1bc08e9d-5605-4554-90bc-6a469960c9cd
+  :answer: A brain tumor.
+- :guid: 56771802-6da7-4daa-a50a-a0d9e9113c26
+  :answer: Cards Against Humanity.
+- :guid: dfb33def-f06b-4c2f-8030-4ed9d973dfbd
+  :answer: Fear itself.
+- :guid: a2897e66-d663-431a-b807-00b1e78c83d5
+  :answer: Lady Gaga.
+- :guid: 4ad2861a-c1f9-4dbe-8b58-d8ea4a6966a5
+  :answer: The milk man.
+- :guid: a6b06f7c-6e12-4ba8-a05b-65fb6aaf1a47
+  :answer: A foul mouth.
+- :guid: ee542f42-50ef-407d-956e-5049f3e0aa8b
+  :answer: Justin Bieber.
+- :guid: 7ff03a8b-4335-4ae4-b846-91a8b311cb6d
+  :answer: Balls.
+- :guid: 18e095e8-12e0-47e6-adaf-8605396abf85
+  :answer: Grandma.
+- :guid: 9ec6d666-341e-4abe-b18e-79d7b0b1f1d8
+  :answer: Friction.
+- :guid: b3083fea-266a-4908-ad25-ec6776b33ff3
+  :answer: Party poopers.
+- :guid: 78ce35ac-150a-40cb-9aa1-e4ea32df3d82
+  :answer: Farting and walking away.
+- :guid: 8e2078e6-2f88-4f9f-9214-58293fa5968b
+  :answer: Being a dick to children.
+- :guid: a890c56b-fbba-4198-a766-9229223d0e1d
+  :answer: Booby-trapping the house to foil burglars.
+- :guid: 1afb72fc-79fb-49cb-81a8-b1c0b2538f8b
+  :answer: The Tempur-Pedic(R) Swedish Sleep System(TM).
+- :guid: cab3459b-e78c-4fad-b131-4c9bed8c95f1
+  :answer: Dying.
+- :guid: 7c851a82-7371-48dd-99d8-290b11c17ff9
+  :answer: Hurricane Katrina.
+- :guid: 273934a9-d99c-4e46-ba08-e5358d624fb1
+  :answer: The gays.
+- :guid: 0a8c05f4-fce0-49aa-81c8-be43693296be
+  :answer: The folly of man.
+- :guid: 06d948a9-c80d-46fe-838c-c05b266a3cc0
+  :answer: A defective condom.
+- :guid: 41835f0e-0aec-4be8-8cdb-623ca83bf449
+  :answer: Judge Judy.
+- :guid: 062f7717-a778-44d6-96c3-e1193f785896
+  :answer: African children.
+- :guid: f4c0e2b5-a683-46d7-8340-f9af07f2d0fa
+  :answer: The Virginia Tech Massacre.
+- :guid: 0b08741e-a6df-41c1-98e3-d34623b11396
+  :answer: Barack Obama.
+- :guid: 35201939-422b-4786-a2f3-3a4543bbbc41
+  :answer: Asians who aren't good at math.
+- :guid: f1404fd4-09de-448f-99df-eab750dd6914
+  :answer: Elderly Japanese men.
+- :guid: d532fe7d-bddf-498b-af6c-0a49311b2be5
+  :answer: Exchanging pleasantries.
+- :guid: d3933304-44aa-4b20-9070-91fd6b157859
+  :answer: Heteronormativity.
+- :guid: ed5ffbc1-bc75-4273-8d91-5165321e5fbf
+  :answer: Parting the Red Sea.
+- :guid: 438f87a9-1db3-4ed5-a981-2c48149d8653
+  :answer: Arnold Schwarzenegger.
+- :guid: 79f1c5ab-f405-4e97-9178-6b614a0aebe0
+  :answer: Road head.
+- :guid: d427c871-82f3-4a80-9376-143d6c4d9ac6
+  :answer: Spectacular abs.
+- :guid: 5e4d6a35-31c3-4c35-b125-f0e38a693206
+  :answer: Figgy pudding.
+- :guid: 90562113-a986-40e9-a6da-34d2727df68d
+  :answer: A mopey zoo lion.
+- :guid: 95b9c0ae-20ce-4c0b-a8fc-bbf604187466
+  :answer: A bag of magic beans.
+- :guid: e388119c-a797-4470-88bd-dcd7fa51f6d9
+  :answer: Poor life choices.
+- :guid: d3d96676-e935-4f44-9099-d9e293c4ddf3
+  :answer: My sex life.
+- :guid: 2b372fb7-ba75-45a4-8dee-1e42596a9304
+  :answer: Auschwitz.
+- :guid: 9711c20a-4cb0-4db8-8f81-4a874a434f1d
+  :answer: A snapping turtle biting the tip of your penis.
+- :guid: b05dafbf-9cbf-498e-a4a4-971beea1238b
+  :answer: A thermonuclear detonation.
+- :guid: c42ee891-e5fd-446f-8789-9edf785f9248
+  :answer: The clitoris.
+- :guid: 75f83a12-160a-4d53-b12e-48827969fa5c
+  :answer: The Big Bang.
+- :guid: e9a4efe0-fd1d-44ab-8593-d85c5fbd02f7
+  :answer: Land mines.
+- :guid: f58f9d7a-b738-4dfa-89ae-f8b58d033be9
+  :answer: Friends who eat all the snacks.
+- :guid: 19781ce7-3f70-4c96-8b60-d5cb71456b6c
+  :answer: Goats eating cans.
+- :guid: d5212bae-a5ac-47bb-a433-e3f4b011ff56
+  :answer: The Dance of the Sugar Plum Fairy.
+- :guid: 78ceb3b7-732e-4f87-90fb-643b9167fc35
+  :answer: Jerking off into a pool of children's tears.
+- :guid: 149180a2-95bf-49a6-9180-92f4a804a9c6
+  :answer: Man meat.
+- :guid: 09f714ae-28f7-43ed-883b-bc7d9903b766
+  :answer: Me time.
+- :guid: e6d4274e-c82f-447d-9ca6-514f057d83be
+  :answer: The Underground Railroad.
+- :guid: 39f934cf-056c-40b7-835f-803b7fc540b9
+  :answer: Poorly-timed Holocaust jokes.
+- :guid: eb357cec-6544-411e-886f-e145f2a98df0
+  :answer: A sea of troubles.
+- :guid: 4e324d71-d5d3-4df0-ac1c-82ec1f9b6d1e
+  :answer: Lumberjack fantasies.
+- :guid: 7df7c320-58f4-4b2d-af46-2e8206fa4bf5
+  :answer: Morgan Freeman's voice.
+- :guid: 46ece6c3-bd07-44e2-b2c7-ac7f570c6e0e
+  :answer: Women in yogurt commercials.
+- :guid: 5a0c5716-f360-444f-8e13-57cd77d13b32
+  :answer: Natural male enhancement.
+- :guid: 4b6fd24c-4a6d-4955-8e16-d26208a97748
+  :answer: Being a motherfucking sorcerer.
+- :guid: 71683eec-fdcf-475f-92e0-d6699498af01
+  :answer: Genital piercings.
+- :guid: 7f54ee91-4973-4ccb-bd0e-67ecf3f152ad
+  :answer: Passable transvestites.
+- :guid: 29e246bc-5480-4e18-b576-354fade413cd
+  :answer: Sexy pillow fights.
+:baked: true
