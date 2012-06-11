@@ -11,15 +11,17 @@ class Player
 		@id = id
 	end
 
-	def answer(anids)
+	def answer(guids)
 		answers = []
 
-		anids.each do |id|
-			answers << hand[id]
+		guids.each do |guid|
+			answers << hand.detect({ raise "you don't have that card" }) do |answer|
+				answer.guid == guid
+			end
 		end
 
 		# submit answers and get rid of the cards
-		@game.current_point.answer[@id] = answers
+		@game.current_point.answers[self] = answers
 		@hand -= answers
 	end
 

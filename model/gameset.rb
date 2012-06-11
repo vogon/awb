@@ -17,12 +17,15 @@ class GameSet
 		begin
 			yaml = YAML.load_file(path)
 
+			if not yaml[:baked] then
+				raise "this isn't a baked set"
+			end
+
 			name = yaml[:name]
 			version = yaml[:version]
 
 			questions = yaml[:questions].map{|q| Question.new(q)}
-
-			answers = yaml[:answers]
+			answers = yaml[:answers].map{|a| Answer.new(a)}
 
 			return GameSet.new(name, version, questions, answers)
 
