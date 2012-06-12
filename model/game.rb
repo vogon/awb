@@ -9,7 +9,7 @@ class Game
 		@n_players = n_players
 
 		@players = [nil] * n_players
-		@card_czar = Random.new.rand 0...n_players
+		@next_card_czar = Random.new.rand 0...n_players
 
 		@questions = set.questions.shuffle
 		@answers = set.answers.shuffle
@@ -20,9 +20,9 @@ class Game
 		slot = next_empty_slot
 		slot or raise "no slots left"
 
-		# put the player in that slot, return player id
+		# put the player in that slot
 		@players[slot] = player
-		slot
+		nil
 	end
 
 	def next_point!
@@ -34,8 +34,11 @@ class Game
 			raise "hold on, we're still finishing the last one"
 		end
 
-		@current_point = Point.new(self, draw_question!, @card_czar)
-		@card_czar = (@card_czar + 1) % @n_players
+		card_czar = players[@next_card_czar]
+		answerers = players.delete(card_czar)
+
+		@current_point = Point.new(self, draw_question!, card_czar, answerers)
+		@next_card_czar = (@card_czar + 1) % @n_players
 
 		# have each player draw up to 10 cards.
 		@players.each do |player|

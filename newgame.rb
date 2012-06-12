@@ -8,7 +8,7 @@ def new_game(n_players)
 		raise ArgumentError.new "not enough players"
 	end
 
-	core_set = GameSet::load('./assets/core_1.2.yaml')
+	core_set = GameSet::load('./assets/core_1.2.set')
 
 	$g = Game.new(params[:n_players].to_i, core_set)
 end

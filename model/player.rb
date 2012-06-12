@@ -15,13 +15,13 @@ class Player
 		answers = []
 
 		guids.each do |guid|
-			answers << hand.detect({ raise "you don't have that card" }) do |answer|
-				answer.guid == guid
-			end
+			a = hand.detect { |answer| answer.guid == guid } 
+			a or raise "you don't have that card"
+			answers << a
 		end
 
 		# submit answers and get rid of the cards
-		@game.current_point.answers[self] = answers
+		@game.current_point.answer!(self, answers)
 		@hand -= answers
 	end
 

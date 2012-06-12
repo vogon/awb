@@ -1,4 +1,5 @@
 require 'model/question'
+require 'model/answer'
 
 require 'yaml'
 
@@ -28,7 +29,6 @@ class GameSet
 			answers = yaml[:answers].map{|a| Answer.new(a)}
 
 			return GameSet.new(name, version, questions, answers)
-
 		rescue
 			nil
 		end
