@@ -1,13 +1,5 @@
 require 'json'
 
-def poetic_print(answers)
-	(answers[1..-1]).inject(answers[0]) { |memo, s| memo + " / " + s }
-end
-
-def play(plid, anids)
-
-end
-
 class AWB::API < Sinatra::Base
 	get '/play/:plid/:anids' do
 		$g or return 403
@@ -26,13 +18,11 @@ class AWB::API < Sinatra::Base
 
 		player.answer(anids)
 
-		<<EOF
-			<html>
-			<body>
-			You answered <i>#{$g.current_point.question.text}</i> with 
-				<i>#{poetic_print(answers)}</i>.
-			</body>
-			</html>
-EOF
+		result =
+			{
+
+			}
+
+		JSON.dump(result)
 	end
 end

@@ -10,7 +10,7 @@ def new_game(n_players)
 
 	core_set = GameSet::load('./assets/core_1.2.set')
 
-	$g = Game.new(params[:n_players].to_i, core_set)
+	$g = Game.new(n_players, core_set)
 end
 
 class AWB::API < Sinatra::Base
