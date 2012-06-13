@@ -17,7 +17,7 @@ var AWB = (function () {
 			}
 
 			$.ajax({
-				url: '/login/' + name
+				url: '/api/login/' + name
 			}).done(ajaxDone);
 		}
 
@@ -35,7 +35,7 @@ var AWB = (function () {
 			}
 
 			$.ajax({
-				url: '/status'
+				url: '/api/status'
 			}).done(ajaxDone);
 		}
 
@@ -46,7 +46,7 @@ var AWB = (function () {
 			}
 
 			$.ajax({
-				url: '/newgame/' + nPlayers
+				url: '/api/newgame/' + nPlayers
 			}).done(ajaxDone);
 		}
 

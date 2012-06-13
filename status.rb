@@ -26,15 +26,15 @@ def hand_markup(plid)
 	end
 end
 
-get '/status' do
-	if $g then
-		JSON.dump({:n_games => 1, :games => {123 => "blah"}})
-	else
-		JSON.dump({:n_games => 0, :games => {}})
-	end
-end
-
 class AWB::API < Sinatra::Base
+	get '/status' do
+		if $g then
+			JSON.dump({:n_games => 1, :games => {123 => "blah"}})
+		else
+			JSON.dump({:n_games => 0, :games => {}})
+		end
+	end
+
 	get '/status/:plid' do
 		$g or return 403
 		params[:plid] or return 400
