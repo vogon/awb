@@ -34,28 +34,30 @@ get '/status' do
 	end
 end
 
-get '/status/:plid' do
-	$g or return 403
-	params[:plid] or return 400
+class AWB::API < Sinatra::Base
+	get '/status/:plid' do
+		$g or return 403
+		params[:plid] or return 400
 
-	plid = params[:plid].to_i
-	((0...$g.n_players) === plid) or return 400
+		plid = params[:plid].to_i
+		((0...$g.n_players) === plid) or return 400
 
-<<EOF
-	<html>
-	<body>
-	This game has #{$g.n_players} players.<br/><br/>
+		<<EOF
+			<html>
+			<body>
+			This game has #{$g.n_players} players.<br/><br/>
 
-	The question is:
-	<blockquote>
-		#{$g.current_point.question.text}
-	</blockquote>
+			The question is:
+			<blockquote>
+				#{$g.current_point.question.text}
+			</blockquote>
 
-	#{card_czar_markup(plid)}
+			#{card_czar_markup(plid)}
 
-	#{hand_markup(plid)}
+			#{hand_markup(plid)}
 
-	</body>
-	</html>
+			</body>
+			</html>
 EOF
+	end
 end

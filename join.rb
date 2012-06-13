@@ -18,32 +18,34 @@ def new_plid
 	SecureRandom.uuid
 end
 
-get '/login/:name' do
-	params[:name] or return 400  # die if no player name was specified
+class AWB::API < Sinatra::Base
+	get '/login/:name' do
+		params[:name] or return 400  # die if no player name was specified
 
-	begin
-		player = login(params[:name])
-	rescue
-		return 403
+		begin
+			player = login(params[:name])
+		rescue
+			return 403
+		end
+
+		plid = new_plid
+		$players[plid] = player
+
+		result = {:plid => plid}
+		JSON.dump(result)
 	end
 
-	plid = new_plid
-	$players[plid] = player
+	get '/join/:plid' do
+		params[:plid] or return 400
 
-	result = {:plid => plid}
-	JSON.dump(result)
-end
+		$g or return 403
+		
+		player = $players[params[:plid]]
+		player or return 403
 
-get '/join/:plid' do
-	params[:plid] or return 400
+		id = join(player, $g)
 
-	$g or return 403
-	
-	player = $players[params[:plid]]
-	player or return 403
-
-	id = join(player, $g)
-
-	result = {:local_id => id}
-	JSON.dump(result)
+		result = {:local_id => id}
+		JSON.dump(result)
+	end
 end

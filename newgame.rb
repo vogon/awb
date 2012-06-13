@@ -13,17 +13,19 @@ def new_game(n_players)
 	$g = Game.new(params[:n_players].to_i, core_set)
 end
 
-get '/newgame/:n_players' do
-	# die with a 400 if no player count was specified
-	params[:n_players] or return 400
+class AWB::API < Sinatra::Base
+	get '/newgame/:n_players' do
+		# die with a 400 if no player count was specified
+		params[:n_players] or return 400
 
-	begin
-		new_game(params[:n_players].to_i)
+		begin
+			new_game(params[:n_players].to_i)
 
-		result = {}
+			result = {}
 
-		JSON.dump(result)
-	rescue ArgumentError
-		return 400
+			JSON.dump(result)
+		rescue ArgumentError
+			return 400
+		end
 	end
 end
