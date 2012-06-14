@@ -1,7 +1,7 @@
 require 'json'
 
 class AWB::API < Sinatra::Base
-	get '/play/:plid/:anids' do
+	post '/play' do
 		$g or return 403
 		params[:plid] or return 400
 		params[:anids] or return 400

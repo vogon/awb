@@ -1,7 +1,7 @@
 require 'json'
 
 class AWB::API < Sinatra::Base
-    get '/nextpoint' do
+    post '/nextpoint' do
     	$g or return 403
 
     	$g.next_point!

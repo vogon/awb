@@ -1,7 +1,7 @@
 require 'json'
 
 class AWB::API < Sinatra::Base
-	get '/status' do
+	get '/games' do
 		if $g then
 			JSON.dump({:n_games => 1, :games => {123 => "blah"}})
 		else
@@ -9,12 +9,12 @@ class AWB::API < Sinatra::Base
 		end
 	end
 
-	get '/status/:plid' do
+	get '/status' do
 		$g or return 403
 		params[:plid] or return 400
 
 		plid = params[:plid].to_i
-		((0...$g.n_players) === plid) or return 400
+		($g.players.index(plid)) or return 400
 
 		result =
 			{

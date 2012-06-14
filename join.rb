@@ -19,7 +19,7 @@ def new_plid
 end
 
 class AWB::API < Sinatra::Base
-	get '/login/:name' do
+	post '/login' do
 		params[:name] or return 400  # die if no player name was specified
 
 		begin
@@ -35,7 +35,7 @@ class AWB::API < Sinatra::Base
 		JSON.dump(result)
 	end
 
-	get '/join/:plid' do
+	post '/join' do
 		params[:plid] or return 400
 
 		$g or return 403

@@ -14,7 +14,7 @@ def new_game(n_players)
 end
 
 class AWB::API < Sinatra::Base
-	get '/newgame/:n_players' do
+	post '/newgame' do
 		# die with a 400 if no player count was specified
 		params[:n_players] or return 400
 
