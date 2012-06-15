@@ -3,8 +3,8 @@ require 'sinatra'
 module AWB
 end
 
-require './join'
-require './newgame'
-require './nextpoint'
-require './play'
-require './status'
+require 'api/join'
+require 'api/newgame'
+require 'api/nextpoint'
+require 'api/play'
+require 'api/status'
