@@ -10,5 +10,13 @@ class Question
 	    end
 	end
 
+	def to_json_id
+		{ :guid => @guid }
+	end
+
+	def to_json_public
+		{ :guid => @guid, :text => @text, :arity => @arity }
+	end
+
 	attr_reader :guid, :text, :arity
 end

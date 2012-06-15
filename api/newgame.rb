@@ -21,7 +21,7 @@ class AWB::API < Sinatra::Base
 		begin
 			new_game(params[:n_players].to_i)
 
-			result = {}
+			result = {:result => "ok"}
 
 			JSON.dump(result)
 		rescue ArgumentError

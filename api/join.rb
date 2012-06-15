@@ -4,7 +4,9 @@ require 'securerandom'
 require 'model/player'
 
 def login(name)
-	Player.new(name)
+	plid = SecureRandom.uuid
+
+	Player.new(name, plid)
 end
 
 def join(player, game)
@@ -13,10 +15,6 @@ end
 
 # terrible homebrew player database, to be replaced with something better later
 $players = {}
-
-def new_plid
-	SecureRandom.uuid
-end
 
 class AWB::API < Sinatra::Base
 	post '/login' do
@@ -28,11 +26,10 @@ class AWB::API < Sinatra::Base
 			return 403
 		end
 
-		plid = new_plid
-		$players[plid] = player
+		$players[player.plid] = player
 
-		result = {:plid => plid}
-		JSON.dump(result)
+		result = {:status => "ok", :plid => player.plid}
+		return JSON.dump(result)
 	end
 
 	post '/join' do
@@ -45,7 +42,7 @@ class AWB::API < Sinatra::Base
 
 		id = join(player, $g)
 
-		result = {:local_id => id}
+		result = {:status => "ok"}
 		JSON.dump(result)
 	end
 end

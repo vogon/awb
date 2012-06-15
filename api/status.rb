@@ -19,8 +19,8 @@ class AWB::API < Sinatra::Base
 		result =
 			{
 				:n => $g.n_players,
-				:question => $g.current_point.question.text,
-				:card_czar => nil,
+				:question => $g.current_point.question.to_json_public,
+				:card_czar => $g.current_point.card_czar.to_json_id,
 				:answered => nil,
 				:hand => nil
 			}

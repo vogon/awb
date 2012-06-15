@@ -1,6 +1,7 @@
 class Player
-	def initialize(name)
+	def initialize(name, plid)
 		@name = name
+		@plid = plid
 		@hand = []
 	end
 
@@ -25,6 +26,20 @@ class Player
 		@hand -= answers
 	end
 
+	def to_json_id
+		return {:plid => @plid}
+	end
+
+	def to_json_public
+		return {:plid => @plid, :name => @name}
+	end
+
+	def to_json_private
+		# todo: dump hand
+		return {:plid => @plid, :name => @name}
+	end
+
 	attr_accessor :name, :hand
+	attr_accessor :plid
 	attr_reader :game
 end
