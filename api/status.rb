@@ -13,8 +13,12 @@ class AWB::API < Sinatra::Base
 		$g or return 403
 		params[:plid] or return 400
 
-		plid = params[:plid].to_i
-		($g.players.index(plid)) or return 400
+		plid = params[:plid]
+
+		player_index = $g.players.index { |player| player.plid == plid }
+		player_index or return 400
+
+		player = $g.players[player_index]
 
 		result =
 			{
@@ -22,7 +26,7 @@ class AWB::API < Sinatra::Base
 				:question => $g.current_point.question.to_json_public,
 				:card_czar => $g.current_point.card_czar.to_json_id,
 				:answered => nil,
-				:hand => nil
+				:hand => player.hand.map { |card| card.to_json_public }
 			}
 
 		JSON.dump(result)
