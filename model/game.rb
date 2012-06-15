@@ -38,7 +38,7 @@ class Game
 		answerers = players.delete(card_czar)
 
 		@current_point = Point.new(self, draw_question!, card_czar, answerers)
-		@next_card_czar = (@card_czar + 1) % @n_players
+		@next_card_czar = (@next_card_czar + 1) % @n_players
 
 		# have each player draw up to 10 cards.
 		@players.each do |player|
